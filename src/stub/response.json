@@ -1,0 +1,42 @@
+{
+    "type": "OkResponse",
+    "message": "items retrieved",
+    "status": 200,
+    "success": true,
+    "data": {
+      "results": [
+        {
+          "item_id": 1,
+          "item_name": "Organic Soy Milk",
+          "item_quantity": 0,
+          "item_notes": "Too many now",
+          "added_at": 1665975109,
+          "image_url": "https://images.heb.com/is/image/HEBGrocery/001354723?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0"
+        },
+        {
+          "item_id": 2,
+          "item_name": "Bananas",
+          "item_quantity": 0,
+          "item_notes": "just got some",
+          "added_at": 1665975166,
+          "image_url": "https://images.heb.com/is/image/HEBGrocery/000377497"
+        },
+        {
+          "item_id": 4,
+          "item_name": "Apples",
+          "item_quantity": 3,
+          "item_notes": "An apple a day keeps the docter away :)",
+          "added_at": 1666056378,
+          "image_url": "https://media.istockphoto.com/photos/red-apple-picture-id184276818?k=20&m=184276818&s=612x612&w=0&h=QxOcueqAUVTdiJ7DVoCu-BkNCIuwliPEgtAQhgvBA_g="
+        },
+        {
+          "item_id": 6,
+          "item_name": "Soy Rizo",
+          "item_quantity": 1,
+          "item_notes": "We already have 3",
+          "added_at": 1666211507,
+          "image_url": "https://www.caciquefoods.com/wp-content/uploads/2016/05/soy-chorizo-plate.png"
+        }
+      ]
+    }
+  }
