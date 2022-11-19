@@ -5,11 +5,13 @@ import './App.css';
 import { Stores } from './features/store/Store';
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import { selectStores } from './features/store/storeSlice';
+import {useGetStoresQuery} from './services/storeApi'
 
 function App() {
+const {data,error,isLoading, isFetching, isSuccess} = useGetStoresQuery()
 
-  const stores = useAppSelector(selectStores);
-  const dispatch = useAppDispatch();
+  // const stores = useAppSelector(selectStores);
+  // const dispatch = useAppDispatch();
 
   useEffect(() =>{
     // This is the overall container for the, need to change to something else, ??
