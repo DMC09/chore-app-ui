@@ -6,3 +6,13 @@ export interface StoreInterface {
     url:string | null
     storeItems: StoreItemInterface[]
 }  
+
+
+export interface allStoresResponseModel {
+    type: string,
+    message: string,
+    status: number,
+    success: boolean,
+    data?: StoreInterface[]
+}  
+
