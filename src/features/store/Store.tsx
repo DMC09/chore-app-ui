@@ -1,11 +1,19 @@
 import React, { useEffect } from 'react'
+import { StoreInterface } from '../../models/store'
 
-export function Stores () {
 
+  export const  Store = ({storeId,storeName,
+    quantity,
+    lastUpdated,
+    createdAt,
+    url,
+    storeItems}:StoreInterface)=> {
 
+    useEffect(() =>{
+          },[])
     return (
         <>
-      <p>  I am store!!</p>
+        <p>{storeName}</p>
         </>
     )
 

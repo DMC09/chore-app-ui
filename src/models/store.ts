@@ -1,18 +1,31 @@
-import StoreItemInterface from "./storeItem";
-
-export interface StoreInterface {
-    name:string | null 
-    quantity: number | null;
-    url:string | null
-    storeItems: StoreItemInterface[]
-}  
 
 
-export interface allStoresResponseModel {
+export interface getAllStoresResponse{
     type: string,
     message: string,
     status: number,
     success: boolean,
-    data?: StoreInterface[]
+    data: StoreInterface[]
+
+}
+export interface StoreInterface {
+    storeId: number
+    storeName:string 
+    quantity: number | null;
+    lastUpdated: number;
+    createdAt:number;
+    url:string 
+    storeItems: StoreItemInterface[]
+}  
+
+
+export interface StoreItemInterface {
+    itemId: number
+    storeId: number
+    itemName: string
+    itemNotes: string
+    quantity: number | null
+    addedAt: number
+    url: string 
 }  
 

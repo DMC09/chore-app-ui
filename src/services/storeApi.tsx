@@ -1,16 +1,19 @@
 import { EndpointBuilder } from "@reduxjs/toolkit/dist/query/endpointDefinitions"
 import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-import { allStoresResponseModel, StoreInterface } from "../models/store"
+import { getAllStoresResponse } from "../models/store"
 
 export const storesApi = createApi({
     reducerPath:"storesApi",
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000" }),
     endpoints:(builder) =>   ({
-        getStores:builder.query<allStoresResponseModel,void>({
+        getAllStores:builder.query<getAllStoresResponse,void>({
             query:()=> '/stores'
-        })
+        }),
+        // deleteStore:builder.query<deleteStoreResponse,void>({
+        //     query:(storeId)=> `store/${storeId}`
+        // })
     })
     
 })
 
-export const {useGetStoresQuery} = storesApi
+export const {useGetAllStoresQuery} = storesApi
