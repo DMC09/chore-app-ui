@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Store } from './features/store/Store';
+import  Store  from './features/store/Store';
 import { useAppSelector, useAppDispatch } from './app/hooks';
-import {useGetAllStoresQuery} from './services/storeApi'
+import {useGetAllStoresAndItemsQuery} from './services/storeApi'
 
-function App() {
-const {data,error,isLoading, isFetching, isSuccess} = useGetAllStoresQuery()
+const App = () => {
+const {data,error,isLoading, isFetching, isSuccess} = useGetAllStoresAndItemsQuery()
 
-  const allStoresAndItems = data?.data.map(store => {
-    return <Store {...store}/>
-  })
+   const  allStoresAndItems = data?.data.map(store => {
+     return <Store key={store.storeId} {...store} />;
+   })
 
   return (
     <>
